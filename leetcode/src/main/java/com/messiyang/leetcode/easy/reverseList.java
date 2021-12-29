@@ -1,5 +1,6 @@
 package com.messiyang.leetcode.easy;
 
+
 import com.messiyang.leetcode.common.ListNode;
 
 /**
@@ -20,7 +21,7 @@ public class reverseList {
         ListNode l2 = null;
         while (l1!=null){
             //temp = 2,3,4 l1 = 1,2,3,4  temp =3,4 l1 = 2,3,4
-            ListNode temp = l1.next();
+            ListNode temp = l1.next;
             //l1 = 1  temp =2,3,4  l1 = 2,1
             l1.next = l2;
             // l2 =1   l2 = 2,1
