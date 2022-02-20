@@ -11,10 +11,10 @@ import java.util.Set;
  * @since 2022/1/6 12:00 上午
  */
 public class singleNumber {
-    public int singleNumber(int[] nums) {
+    public int test(int[] nums) {
         Set<Integer> cache = new HashSet<>();
-        for (int i = 0; i < nums.length; i++) {
-            if (!cache.add((nums[i]))) {
+        for(int i=0;i<nums.length;i++){
+            if(!cache.add(nums[i])){
                 cache.remove(nums[i]);
             }
         }

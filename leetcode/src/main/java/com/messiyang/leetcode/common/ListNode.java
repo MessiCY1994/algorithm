@@ -13,14 +13,14 @@ public class ListNode {
     public int val;
     public ListNode next;
 
-    ListNode() {
+    public ListNode() {
     }
 
-    ListNode(int val) {
+    public ListNode(int val) {
         this.val = val;
     }
 
-    ListNode(int val, ListNode next) {
+    public ListNode(int val, ListNode next) {
         this.val = val;
         this.next = next;
     }
@@ -39,5 +39,7 @@ public class ListNode {
             cur = cur.next;     //最后我们的这个this其实是：用for循环创建出来的链表相对应的头节点
         }
     }
+
+
 }
 
