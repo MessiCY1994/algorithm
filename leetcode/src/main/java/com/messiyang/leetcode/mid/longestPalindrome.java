@@ -1,5 +1,7 @@
 package com.messiyang.leetcode.mid;
 
+import java.lang.reflect.Array;
+
 /**
  * 最长的回文子串
  *
@@ -53,5 +55,36 @@ public class longestPalindrome {
             }
         }
         return s.substring(begin, begin + maxLen);
+    }
+
+
+
+    public String longestPalindrome1(String s) {
+        int size = s.length();
+        if(size<2){
+            return s;
+        }
+        int maxlen = 1;
+        int begin = 0;
+        for(int i=0;i<size-1;i++){
+            for(int j=i+1;j<size;j++){
+                if(j-i+1>maxlen&&ishuiwen(s.toCharArray(),i,j)){
+                    maxlen=j-i+1;
+                    begin=i;
+                }
+            }
+        }
+        return s.substring(begin,begin+maxlen);
+    }
+
+    public boolean ishuiwen(char[] charArray,int left,int right){
+        while(left<right){
+            if(charArray[left]!=charArray[right]){
+                return false;
+            }
+            left++;
+            right--;
+        }
+        return true;
     }
 }
