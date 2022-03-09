@@ -22,6 +22,7 @@ public class permute {
         System.out.println(list);
     }
 
+
         public List<List<Integer>> permute(int[] nums) {
             List<List<Integer>> res = new ArrayList<>();
             List<Integer> list = new ArrayList<>();
