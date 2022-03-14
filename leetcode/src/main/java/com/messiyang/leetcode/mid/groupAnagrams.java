@@ -18,16 +18,15 @@ public class groupAnagrams {
         for(String str:strs){
             char[] chars = str.toCharArray();
             Arrays.sort(chars);
-            String key=String.valueOf(chars);
-            if(!map.containsKey(key)){
+            String key = String.valueOf(chars);
+            if(map.containsKey(key)){
+                map.get(key).add(str);
+            }else{
                 List<String> list = new ArrayList<>();
                 list.add(str);
                 map.put(key,list);
-            }else{
-                map.get(key).add(str);
             }
         }
-
         return new ArrayList<>(map.values());
     }
 }

@@ -16,13 +16,13 @@ public class generateParenthesis {
     }
 
     public static void backtrack(List<String> ans, StringBuilder cur, int open, int close, int max) {
-        if (cur.length() == max * 2) {
+        if(cur.length()==max*2){
             ans.add(cur.toString());
-            return;
         }
-        if (open < max) {
-            cur.append('(');
-            backtrack(ans, cur, open + 1, close, max);
+
+        if(open<max){
+            cur.append("(");
+            backtrack(ans,cur,open+1,close,max);
             cur.deleteCharAt(cur.length() - 1);
         }
         if (close < open) {

@@ -15,8 +15,6 @@ import java.util.List;
  */
 public class merge {
     public static int[][] merge(int[][] intervals) {
-
-
         Arrays.sort(intervals,(a,b)->a[0]-b[0]);
         List<int[]> res = new LinkedList<>();
         int[] temp = null;
