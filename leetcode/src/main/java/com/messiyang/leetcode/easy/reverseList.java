@@ -14,20 +14,16 @@ import com.messiyang.leetcode.common.ListNode;
 public class reverseList {
     public ListNode reverseList(ListNode head) {
         if(head==null){
-            return null;
+            return  null;
         }
-        // l1=1,2,3,4
+
         ListNode l1 = head;
-        ListNode l2 = null;
+        ListNode l2 =null;
         while (l1!=null){
-            //temp = 2,3,4 l1 = 1,2,3,4  temp =3,4 l1 = 2,3,4
             ListNode temp = l1.next;
-            //l1 = 1  temp =2,3,4  l1 = 2,1
-            l1.next = l2;
-            // l2 =1   l2 = 2,1
+            l1.next =l2;
             l2 = l1;
-            // l1 = 2,3,4 l1= 3,4
-            l1 = temp;
+            l1 =temp;
         }
         return l2;
 
