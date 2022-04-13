@@ -26,4 +26,10 @@ public class isSymmetric {
         }
         return issame(left.left, right.right) && issame(left.right, right.left);
     }
+
+    public static void main(String[] args) {
+        String devId ="awfq192fbb067cbf0730090471hl";
+        String realDevId = devId.substring(6,devId.length());
+        System.out.println(realDevId);
+    }
 }
